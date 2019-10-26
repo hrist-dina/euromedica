@@ -56,16 +56,24 @@
     }
 
     &__decor {
+      font-size: 0;
       position: relative;
       margin-top: 60px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      @include sm-block {
+        min-height: 430px;
+        overflow: hidden;
+      }
     }
 
     &__flower {
       position: absolute;
-      left: -17%;
+      left: 20%;
+      @include xs-block {
+        left: -50%;
+      }
     }
   }
 }

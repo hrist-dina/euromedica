@@ -5,6 +5,15 @@
     height: 432px;
     background: #ffd8ea;
 
+    @include lg-block {
+      padding: 0 5%;
+    }
+    @include sm-block {
+      @include container();
+      height: 220px;
+      overflow: hidden;
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -13,9 +22,13 @@
       right: 0;
       left: auto;
       margin: auto;
-      background: url("../img/header/face.png") no-repeat center;
+      background: url("../img/header/face.png") no-repeat center right;
+      background-size: cover;
       width: 423px;
       height: 100%;
+      @include sm-block {
+        content: none;
+      }
     }
 
     &:after {
@@ -26,9 +39,14 @@
       right: 20%;
       left: auto;
       margin: auto;
-      background: url("../img/header/girl.png") no-repeat center;
+      background: url("../img/header/girl.png") no-repeat center top;
+      background-size: contain;
       width: 423px;
       height: 100%;
+
+      @include sm-block {
+        content: none;
+      }
     }
 
     & .logo {
@@ -37,6 +55,11 @@
       max-width: 500px;
       max-height: 131px;
       width: 100%;
+
+      @include lg-block {
+        padding-top: 40px;
+        max-width: 400px;
+      }
 
       & img {
         max-width: 100%;
@@ -52,9 +75,15 @@
         bottom: auto;
         margin: auto;
         background: url("data:image/svg+xml,%3Csvg width='582' height='370' viewBox='0 0 582 370' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.07' filter='url(%23filter0_f)'%3E%3Ccircle cx='291' cy='79' r='264' stroke='%23FF0289' stroke-width='50'/%3E%3C/g%3E%3Cg opacity='0.07' filter='url(%23filter1_f)'%3E%3Ccircle cx='291' cy='79' r='181' stroke='%23FF0289' stroke-width='50'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f' x='0' y='-212' width='582' height='582' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='1' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3Cfilter id='filter1_f' x='83' y='-129' width='416' height='416' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='1' result='effect1_foregroundBlur'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
-          no-repeat center;
+          no-repeat center top;
+        background-size: contain;
         width: 582px;
         height: 370px;
+
+        @include lg-block {
+          width: 482px;
+          height: 200px;
+        }
       }
     }
   }

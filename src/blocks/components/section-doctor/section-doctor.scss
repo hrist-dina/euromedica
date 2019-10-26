@@ -17,6 +17,10 @@
         height: 50px;
         border-radius: 0 5px 5px 0;
         background-color: #df0885;
+
+        @include to(1170px) {
+          content: none;
+        }
       }
 
       & img {
@@ -27,11 +31,17 @@
 
     &__lenta {
       position: absolute;
-      top: 350px;
+      top: 42%;
+      left: 0;
+      right: 0;
+      bottom: auto;
+      margin: auto;
 
       & img {
         max-width: 100%;
         max-height: 100%;
+        margin: auto;
+        display: inherit;
       }
     }
   }
