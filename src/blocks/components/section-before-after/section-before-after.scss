@@ -1,34 +1,57 @@
 .wrap-euromedica {
   & .section-before-after {
     margin-top: 174px;
-    &__block {
-      position: relative;
-      max-width: 1531px;
-      background: #ffebee;
-      width: 100%;
-      height: 992px;
-      margin-left: auto;
+    position: relative;
 
-      &-top {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: url("../img/section-service/circles.svg");
+      width: 414px;
+      height: 506px;
+    }
+    &__block {
+      &-right {
+        position: relative;
+        max-width: 1515px;
+        background: #ffebee;
+        width: 100%;
+        height: 992px;
+        margin-left: auto;
+        margin-bottom: 370px;
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -170px;
+          width: 441px;
+          height: 942px;
+          background: url("../img/section-before-after/girl.png") no-repeat
+            center;
+        }
+      }
+
+      &-inner {
         display: flex;
         align-items: flex-start;
       }
 
-      &-bottom {
-        margin-top: 48px;
-        max-width: 1531px;
+      &-left {
+        top: 600px;
+        position: absolute;
+        max-width: 1600px;
         width: 100%;
-        margin-right: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
       }
 
-      &:before {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -170px;
-        width: 441px;
-        height: 942px;
-        background: url("../img/section-before-after/girl.png") no-repeat center;
+      &-bottom {
+        max-width: 1600px;
+        width: 100%;
+        margin-right: auto;
       }
     }
 
@@ -43,6 +66,7 @@
       background: #fff;
       box-shadow: 28px 28px 30px rgba(0, 0, 0, 0.06);
       box-sizing: border-box;
+
       &-title {
         font-family: "PT Sans";
         font-size: 32px;
@@ -85,15 +109,48 @@
       }
     }
 
-    &__sreen-bottom {
+    &__screen-bottom {
       width: 840px;
       height: 707px;
-      margin-left: auto;
+      display: flex;
+
       & img {
         max-width: 100%;
         max-height: 100%;
         box-shadow: 12px 18px 32px rgba(0, 0, 0, 0.05);
       }
+
+      &-text {
+        position: relative;
+        right: -15px;
+        max-width: 455px;
+        margin-top: 90px;
+        font-size: 18px;
+        line-height: 32px;
+        color: #333333;
+        padding: 0 60px 18px 0;
+        box-sizing: border-box;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: auto;
+          margin: auto;
+          height: 2px;
+          width: 100%;
+          background: #ff0289;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 64px;
+      font-size: 18px;
+      line-height: 32px;
+      color: #333333;
     }
   }
 }

@@ -1,0 +1,71 @@
+.wrap-euromedica {
+  & .section-footer {
+    text-align: center;
+    &__text {
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    &__link {
+      position: relative;
+      display: inline-block;
+      font-family: Roboto;
+      font-size: 20px;
+      line-height: 32px;
+      color: #2f3334;
+      padding: 9px 42px 7px 56px;
+      text-decoration: none;
+      background: #ffffff;
+      box-sizing: border-box;
+      box-shadow: 0 2px 14px rgba(192, 19, 112, 0.1);
+      border-radius: 24px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 7px;
+        bottom: 0;
+        right: auto;
+        margin: auto;
+        width: 34px;
+        height: 34px;
+        background: url("../img/footer/logo-mini.svg") no-repeat center;
+      }
+    }
+    &__logo {
+      margin-top: 45px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      &-year {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: #ff0289;
+      }
+
+      & img {
+        margin-right: 6px;
+      }
+    }
+
+    &__decor {
+      position: relative;
+      margin-top: 60px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    &__flower {
+      position: absolute;
+      left: -17%;
+    }
+  }
+}
